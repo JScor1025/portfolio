@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:900" rel="stylesheet">
+</head>
+<body>
+    <a href="./index.html">
+        <h1>GALLARY</h1>
+    </a>
+
+    <div class="container">
+        <div class="content">
+            <h2 class="title">LOGO</h2>
+            <a href="./logo.html"></a>
+        </div>
+        <div class="content">
+            <h2 class="title">AVI</h2>
+            <a href="./avi.html"></a>
+        </div>
+        <div class="content">
+            <h2 class="title">OTHER</h2>
+            <a href="./other.html"></a>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+    <script type="text/javascript">
+            VanillaTilt.init(document.querySelectorAll(".content"), {
+                max: 25,
+                speed: 400,
+                glare: true,
+            });
+    </script>
+<script src="js/main.js"></script>
+</body>
+</html>

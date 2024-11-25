@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/gallery.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:900" rel="stylesheet">
+</head>
+<body>
+    <div class="content-title">
+        <a href="./logo.html"><h2>LOGO</h2></a>
+        <a href="./avi.html"><h2>AVI</h2></a>
+        <a href="./other.html"><h2>OTHER</h2></a>
+    </div>
+
+    <div class="container">
+        <div class="item">
+            <img src="image/avi01.png" alt="" onclick="openModal(this)">
+        </div>
+        <div class="item">
+            <img src="image/avi02.png" alt="" onclick="openModal(this)">
+        </div>
+        <div class="item">
+            <img src="image/avi03.png" alt="" onclick="openModal(this)">
+        </div>
+        <div class="item">
+            <img src="image/avi04.png" alt="" onclick="openModal(this)">
+        </div>
+    </div>
+
+    <a href="./index.html" class="top">TOP</a>
+
+    <div class="modal" id="imageModal" onclick="closeModal()">
+        <img id="modalImage">
+    </div>
+
+    <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+    <script type="text/javascript">
+            VanillaTilt.init(document.querySelectorAll(".item"), {
+                max: 25,
+                speed: 400,
+                glare: true,
+            });
+    </script>
+    <script>
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+
+        function openModal(image) {
+            modalImage.src = image.src;
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
